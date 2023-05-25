@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> I am in the students page</h1>
+
+  
+    <table border="1">
+        {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td><a href="{% url 'student' student.id %}">go...</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+</html>
